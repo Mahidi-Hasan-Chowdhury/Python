@@ -1,0 +1,3 @@
+numbers = [12,23,34,45,56]
+for i,num in enumerate(numbers):
+    print(i,num)
