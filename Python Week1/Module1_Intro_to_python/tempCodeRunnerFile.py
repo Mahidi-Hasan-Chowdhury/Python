@@ -1,3 +1,1 @@
-print("I Love Python");
 print("I am learning Python");
-
