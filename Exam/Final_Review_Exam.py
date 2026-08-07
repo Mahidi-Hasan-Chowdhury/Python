@@ -148,7 +148,13 @@ else:
 #   3. Skips the number 5 (use continue).
 #   4. Prints each number.
 # YOUR CODE:
-
+counter = 10
+while counter >= 1:
+    if counter ==5:
+        counter -= 1
+        continue
+    print(counter)
+    counter -= 1
 
 
 
@@ -161,7 +167,7 @@ else:
 # List     = ordered, __________ (can/cannot be changed)
 # Tuple    = ordered, __________ (can/cannot be changed)
 # Set      = __________, only stores unique items
-# YOUR ANSWER:
+# YOUR ANSWER: List = ordered, can be changed; Tuple = ordered, cannot be changed; Set = unordered, only stores unique items
 
 
 # Q17. What will be the output? (4 pts)
@@ -170,14 +176,18 @@ else:
 # info["job"] = "Engineer"
 # print(info["city"])
 # print(len(info))
-# YOUR ANSWER:
+# YOUR ANSWER: {"city": "Dhaka"} and 4
 
 
 # Q18. CODING — Write a script that: (8 pts)
 #   1. Creates a list of 5 numbers: [10, 20, 30, 40, 50]
 #   2. Loops through the list using a for loop.
 #   3. Prints only the numbers greater than 25.
-# YOUR CODE:
+# YOUR CODE: 
+numbers = [10, 20, 30, 40, 50]
+for n in numbers:
+    if n > 25:
+        print(n)
 
 
 
@@ -187,7 +197,7 @@ else:
 # ==============================================================================
 
 # Q19. What is the difference between print() and return in a function? (3 pts)
-# YOUR ANSWER:
+# YOUR ANSWER: `print()` outputs a value to the console, while `return` sends a value back to the caller of the function, allowing it to be used later in the program.
 
 
 # Q20. What will this code output? (4 pts)
@@ -196,7 +206,7 @@ else:
 #
 # print(greet("Sara"))
 # print(greet("Omar", "Hi"))
-# YOUR ANSWER:
+# YOUR ANSWER: Hello, Sara! Hi, Omar!
 
 
 # Q21. CODING — Write a function that: (8 pts)
@@ -208,7 +218,16 @@ else:
 #   6. Returns "Overweight" if BMI >= 25
 #   7. Call the function and print the result.
 # YOUR CODE:
+def calculate_bmi(weight, height):
+    bmi = weight / (height ** 2)
+    if bmi < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi < 25:
+        return "Normal"
+    else:
+        return "Overweight"
 
+print(calculate_bmi(70, 1.75))
 
 
 
@@ -225,7 +244,16 @@ else:
 #   6. If guess is correct  -> print "Correct! You got it!" and stop the loop.
 # YOUR CODE:
 
-
+secret_number = 7
+while True:
+    guess = int(input("Enter your guess: "))
+    if guess < secret_number:
+        print("Too low! Try again.")
+    elif guess > secret_number:
+        print("Too high! Try again.")
+    else:
+        print("Correct! You got it!")
+        break
 
 
 # ==============================================================================
