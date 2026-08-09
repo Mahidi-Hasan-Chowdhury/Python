@@ -79,6 +79,9 @@ print(f"Hello {name}! You are {age} years old.")
 #   Then prints the result.
 # YOUR CODE:
 score = 95
+score += 5
+print(score)
+
 
 
 
@@ -176,7 +179,9 @@ while counter >= 1:
 # info["job"] = "Engineer"
 # print(info["city"])
 # print(len(info))
-# YOUR ANSWER: {"city": "Dhaka"} and 4
+# YOUR ANSWER: 
+# Dhaka 
+# 4
 
 
 # Q18. CODING — Write a script that: (8 pts)
